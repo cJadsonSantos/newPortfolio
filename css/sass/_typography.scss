@@ -1,0 +1,196 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+    color      : $branco;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color      : $verde;
+}
+
+a {
+    text-decoration: none;
+    color          : $cinza-escuro;
+}
+
+h1 {
+    font-size  : 56px;
+    line-height: 120%;
+}
+
+h2 {
+    font-size: 40px;
+
+    line-height: 130%;
+}
+
+h3 {
+    font-size  : 32px;
+    line-height: 140%;
+
+}
+
+h4 {
+    font-size  : 24px;
+    line-height: 150%;
+}
+
+h5 {
+    color      : $branco;
+    font-size  : 18px;
+    line-height: 160%;
+
+}
+
+h6 {
+    font-size  : 12px;
+    line-height: 170%;
+}
+
+p {
+    text-align: left;
+    color     : $cinza-escuro;
+    font-size : 16px;
+}
+
+
+span {
+    color: $branco;
+}
+
+
+@media screen and (max-width: 860px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    p {
+        font-size: 12px;
+    }
+}
+
+
+.link {
+
+    padding   : 0px 8px;
+    font-size : 18px;
+    transition: .5s ease;
+    position  : relative;
+
+
+    // Antes do elemento, constroe algo
+    &::after {
+        content : '';
+        display : block;
+        position: absolute;
+        top     : 100%;
+        left    : 0;
+        width   : 0%;
+        height  : 2px;
+
+        //Controla a posição do content diante os textos do menu
+        transform       : translate(14%, -50%);
+        transition      : .3s ease;
+        background-color: $verde;
+    }
+
+
+    // Junta ao link a propriedade hover, aplicando o efeito de transparencia ao passar o mouse em cima dos nomes no menu
+    &:hover {
+        opacity: .5;
+
+
+        &::after {
+            width: 80%;
+        }
+    }
+}
+
+.curriculo {
+    color: $verde;
+}
+
+.fas {
+    margin-left : 10px;
+    color       : #48A2A0;
+    margin-right: 50px;
+}
+
+
+.mask {
+    // Ajusta ao tamanho do conteúdo
+    display                : inline-block;
+    background             : linear-gradient(180deg, #46FFFB -27.05%, rgba(0, 255, 251, 0) 190.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::after {
+        display : block;
+        position: absolute;
+        width   : 0%;
+    }
+
+    &:hover {
+        opacity: .5;
+    }
+
+    transition : .3s ease;
+}
+
+.curriculo {
+    //display        : inline-block;
+    border           : 1px solid #48A2A0;
+    border-radius    : 50px;
+    padding          : 4px 18px;
+    //background   : linear-gradient(180deg, #46FFFB -27.05%, rgba(0, 255, 251, 0) 190.16%);
+
+    &::after {
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        content : '';
+        display : block;
+        position: absolute;
+        z-index : -1;
+    }
+}
+
+.desenvolvido {
+    text-align      : center;
+    // margin-bottom: 5px;
+}
+
+.love {
+    color: $verde;
+}
+
+.ano {
+    text-align      : center;
+    // margin-bottom: 10px;
+}
+
+.coffee {
+    margin-top : 15%;
+    margin-left: 10%;
+    font-size  : 150px;
+}
+
+.contato {
+    margin-top: 50%;
+}

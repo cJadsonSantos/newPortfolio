@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Portfolio</title>
     <link rel="shortcut icon" type="image/png" href="./img/icon.png">
     <link rel="stylesheet" href="css/style.css">
@@ -19,7 +20,6 @@
 </head>
 
 <body>
-
     <!-- início do preloader -->
     <div id="preloader">
         <div class="inner">
@@ -28,68 +28,74 @@
         </div>
     </div>
     <!-- fim do preloader -->
-
     <!-- HEADER -->
     <header class="menu">
         <div class="menu-left">
-            <a href="index.html" class="link">Sobre</a>
-            <a href="skills.html" class="link">Skills</a>
+            <a href="index.html" class="link menu-1">Sobre</a>
         </div>
         <div class="menu-logo">
-            <a href="" class="link">Jadson</a>
+            <a href="" class="link menu-2">Jadson</a>
         </div>
         <div class="menu-right">
-            <a href="" class="link">Tecnologias</a>
-            <a href="" class="link">Contato</a>
+            <a href="skills.html" class="link menu-3">Contato</a>
         </div>
     </header>
-
-    <!-- BACKGROUND HERO -->
-    <div class="bg-hero"></div>
 
     <!---->
     <section class="container hero">
         <div class="container-item">
-            <h2 class="mask">DESENVOLVEDOR FULL STACK</h2>
-            <h1>JADSON CONCEIÇÃO SANTOS</h1>
+            <div class="funcao">
+                <h2 class="mask">DESENVOLVEDOR FULL STACK</h2>
+            </div>
+            <div class="nome">
+                <h1>JADSON C. SANTOS</h1>
+            </div>
             <br>
-            <p>O sucesso nasce do querer, da <span>determinação e persistência</span></p>
-            <p>em se chegar a um objetivo. Mesmo não atingindo o alvo,</p>
-            <p>quem busca e vence obstáculos, no mínimo </p>
-            <span>fará coisas admiráveis.</span>
-            <i class="icon-1 fas fa-pen-square" id="fas"></i>
-            <span> Jose de Alencar</span>
-            <i class="icon-1 fas fa-heart"></i>
-            </br>
-            </br>
-            </br>
+            <div>
+                <p>O sucesso nasce do querer, da <span>determinação e persistência</span></p>
+                <p>em se chegar a um objetivo. Mesmo não atingindo o alvo,</p>
+                <p>quem busca e vence obstáculos, no mínimo </p>
+                <span>fará coisas admiráveis.</span>
+                <i class="icon-1 fas fa-pen-square" id="fas"></i>
+                <span class="autor"> Jose de Alencar</span>
+                <i class="icon-1 fas fa-heart"></i>
+            </div>
+
             <div class="mask">
                 <a href="img/JADSON SANTOS Full Stack.pdf" class="curriculo">BAIXAR CURRICULO</a>
             </div>
         </div>
         <div class="container-item">
-            <img class="mask" draggable="false" src="img/computer.png" alt="">
+            <div>
+                <img class="mask" draggable="false" src="img/computer.png" alt="">
+            </div>
         </div>
     </section>
 
     <!---->
-    <section class="container">
+    <section class="container hero">
         <div class="container-item">
-            <h2 class="mask">SOBRE</h2>
-            <h3>Conheça um pouco sobre mim.</h3>
-            <br>
-            <p>
-                Formação: <span>analise e desenvolvimento de sistemas</span>
-            </p>
-            <p>Fundação visconde de cairu.</p>
-            </br>
-            <p>Desenvolvedor <span>Full Stack</span>Social Media <span>Design.</span></p>
-            <br>
-            <h3>Tecnologias</h3>
-            </br>
-            <p>PHP, JAVA, JAVASCRIPT</p>
-            </br>
-            <p>ANGULAR, VUE, BOOTSTRAP</p>
+            <div>
+                <h2 class="mask">SOBRE</h2>
+            </div>
+            <div>
+                <h3>Conheça um pouco sobre mim.</h3>
+                <br>
+                <p>
+                    Formação: <span>analise e desenvolvimento de sistemas</span>
+                </p>
+                <p>Fundação visconde de cairu.</p>
+                </br>
+                <p>Desenvolvedor <span>Full Stack </span>Social Media <span>Design.</span></p>
+                <br>
+            </div>
+            <div>
+                <h3>Tecnologias</h3>
+                </br>
+                <p>PHP, JAVA, JAVASCRIPT</p>
+                </br>
+                <p>ANGULAR, VUE, BOOTSTRAP</p>
+            </div>
         </div>
 
         <div class="container-item">
@@ -122,33 +128,35 @@
                 </div>
             </div>
         </div>
-
     </section>
 
-    <!--SELECTED WORKS-->
-    <section class="list">
+    <!--PROJETOS-->
+    <section class="list" id="section-01">
         <div class="list-item">
             <h2 class="mask">PROJETOS</h2>
         </div>
         <div class="list-item py-6">
             <h5 class="color-gray mr-2">01.</h5>
-            <a href="" target="_blank">
-                <h3>ANGULAR.</h3>
+            <a href="Apple/index.html" target="_blank">
+                <h3>Apple.</h3>
             </a>
-            <img src="img/sass.jpg" draggable="false" class="img-project" alt="">
+            <img src="img/apple.jpg" draggable="false" class="img-project" alt="">
         </div>
+        
         <!--Linha cinza-->
         <div class="bb-gray"></div>
 
         <div class="list-item py-6">
             <h5 class="color-gray mr-2">02.</h5>
-            <a href="" target="_blank">
-                <h3>VUE.</h3>
+            <a href="https://sparkly-squirrel-62b959.netlify.app/" target="_blank">
+                <h3>React.</h3>
             </a>
-            <img src="img/vue.jpg" class="img-project" alt="">
+            <img src="img/React.jpeg" class="img-project" alt="">
         </div>
 
+        <!--Linha -->
         <div class="bb-gray"></div>
+        <!--cinza-->
 
         <div class="list-item py-6">
             <h5 class="color-gray mr-2">03.</h5>
@@ -157,50 +165,87 @@
             </a>
             <img src="img/java.jpg" class="img-project" alt="">
         </div>
-
-        <div class="bb-gray py-6"></div>
-
-        <div class="list-item py-6">
-            <h5 class="color-gray mr-2">04.</h5>
-            <a href="" target="_blank">
-                <h3>JAVA.</h3>
-            </a>
-            <img src="img/java.jpg" class="img-project" alt="">
-        </div>
-
-        <div class="bb-gray"></div>
-
-        <div class="list-item py-6">
-            <h5 class="color-gray mr-2">05.</h5>
-            <a href="" target="_blank">
-                <h3>PHP.</h3>
-            </a>
-            <img src="img/sass.jpg" class="img-project" alt="">
-        </div>
-
-        <div class="bb-gray"></div>
-
-        <div class="list-item py-6">
-            <h5 class="color-gray mr-2">06.</h5>
-            <a href="" target="_blank">
-                <h3>JS.</h3>
-            </a>
-            <img src="img/vue.jpg" class="img-project" alt="">
-        </div>
-
     </section>
-
-    <footer>
-        <p class="desenvolvido">Desenvolvido com <i class="icon-1 love fa fa-heart" id="love"></i> por
-            <span>Jadson Conceição Santos</span>
-        </p>
+    
+    <!--Fim projetos-->
+    <footer id="footer">
+        <p class="desenvolvido">Desenvolvido com <i class="love fa fa-heart" id="love"></i> por <span>Jadson
+                Conceição
+                Santos</span></p>
         <p class="ano">2021</p>
     </footer>
+    <!--SCRIPT GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+        integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--JAVA SCRIPT-->
-
     <script src="preloader.js"></script>
     <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            var timeline = gsap.timeline();
+            timeline
+                .from(".menu-1", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    delay: 1,
+                    ease: "power4.out"
+                }, "-=0.9")
+                .from(".menu-2", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    ease: "power4.out"
+                }, "-=0.8")
+                .from(".menu-3", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    ease: "power4.out"
+                }, "-=0.8")
+
+                .from(".footer p", {
+                    duration: 1,
+                    y: 100,
+                    opacity: 0,
+                    stagger: { each: 0.2 },
+                    ease: "power4.out"
+                }, "-=0.8")
+
+                .from(".container-item div", {
+                    duration: 1,
+                    y: 300,
+                    opacity: 0,
+                    stagger: { each: 0.2 },
+                    ease: "sine.out"
+                }, "-=0.6")
+
+                .from("#footer", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    stagger: { each: 0.2 },
+                    ease: "power4.out"
+                }, "-=0.8")
+
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.from("#section-01 div", {
+                duration: 1,
+                y: 300,
+                opacity: 0,
+                delay: 1,
+                stagger: { each: 0.2 },
+                ease: "power4.out",
+                scrollTrigger: {
+                    triggerRef: "#section-01",
+                }
+            })
+        })
 
         //<![CDATA[
         $(window).on('load', function () {
@@ -210,6 +255,9 @@
         })
         //]]>
     </script>
+
+
+
 </body>
 
 </html>

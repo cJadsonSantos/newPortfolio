@@ -1,6 +1,10 @@
 $verde : #48A2A0;
 
-$lilas: #14151F;
+/*$lilas: #14151F;*/
+$lilas: linear-gradient(-45deg, #203D3F,#14151F, #14151F);
+$gradiente: linear-gradient(-45deg, #14151F,#203D3F, #14151F);
+$gradiente-mobile: linear-gradient(-45deg, #14151F,#203D3F, #14151F);
+$lilas-mobile: linear-gradient(100deg, #14151F,#203D3F, #14151F);
 
 $cinza-escuro: #C1C1C1;
 

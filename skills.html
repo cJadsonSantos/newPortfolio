@@ -20,37 +20,43 @@
 </head>
 
 <body>
-    
+    <!-- início do preloader -->
+    <div id="preloader">
+        <div class="inner">
+            <!-- HTML DA ANIMAÇÃO DO PRELOADER! -->
+            <img src="img/circle2.png" alt="">
+        </div>
+    </div>
+    <!-- fim do preloader -->
     <!-- HEADER -->
     <header class="menu">
         <div class="menu-left">
             <a href="index.html" class="link">Sobre</a>
-            <a href="skills.html" class="link">Skills</a>
         </div>
         <div class="menu-logo">
             <a href="" class="link">Jadson</a>
         </div>
         <div class="menu-right">
-            <a href="" class="link">Tecnologias</a>
-            <a href="" class="link">Contato</a>
+            <a href="skills.html" class="link">Contato</a>
         </div>
     </header>
 
 
     <!--SKILLS-->
     <section class="container hero">
-
         <div class="container-skills">
-            <div class="skills">SKILLS</div>
-            <div>
+            <div class="skills-nome">SKILLS</div>
+            <div class="skills">
                 <i class="fab fa-angular"></i>
                 <i class="fab fa-vuejs"></i>
                 <i class="fab fa-bootstrap"></i>
             </div>
             <div>
-                <i class="fab fa-java"></i>
-                <i class="fab fa-php"></i>
-                <i class="fab fa-js"></i>
+                <div class="skills">
+                    <i class="fab fa-java"></i>
+                    <i class="fab fa-php"></i>
+                    <i class="fab fa-js"></i>
+                </div>
             </div>
         </div>
     </section>
@@ -78,14 +84,105 @@
                 </div>
             </div>
     </section>
-    
 
-    <footer>
-        <p class="desenvolvido">Desenvolvido com <i class="icon-1 love fa fa-heart" id="love"></i> por <span>Jadson
+
+    <footer id="footer">
+        <p class="desenvolvido">Desenvolvido com <i class="love fa fa-heart" id="love"></i> por <span>Jadson
                 Conceição
                 Santos</span></p>
         <p class="ano">2021</p>
     </footer>
+
+    <!--SCRIPT GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+        integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--JAVA SCRIPT-->
+    <script src="preloader.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            var timeline = gsap.timeline();
+            timeline
+                .from(".menu-1", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    delay: 1,
+                    ease: "power4.out"
+                }, "-=0.9")
+                .from(".menu-2", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    ease: "power4.out"
+                }, "-=0.8")
+                .from(".menu-3", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    ease: "power4.out"
+                }, "-=0.8")
+                .from(".skills-nome", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    ease: "elastic.out"
+                }, "-=0.8")
+                .from(".coffee", {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    ease: "slow.out"
+                }, "-=0.8")
+
+
+                .from(".footer p", {
+                    duration: 1,
+                    y: 100,
+                    opacity: 0,
+                    stagger: { each: 0.2 },
+                    ease: "power4.out"
+                }, "-=0.8")
+
+
+                .from(".skills", {
+                    duration: 1,
+                    y: 100,
+                    opacity: 0,
+                    stagger: { each: 0.2 },
+                    ease: "power4.out"
+                }, "-=0.8")
+
+                .from(".container-item div", {
+                    duration: 1,
+                    y: 300,
+                    opacity: 0,
+                    stagger: { each: 0.2 },
+                    ease: "sine.out"
+                }, "-=0.6")
+                
+                .from("#footer", {
+                    duration: 1,
+                    y: 100,
+                    opacity: 0,
+                    stagger: { each: 0.2 },
+                    ease: "power4.out"
+                }, "-=0.8")
+        })
+
+        //<![CDATA[
+        $(window).on('load', function () {
+            $('#preloader .inner').fadeOut();
+            $('#preloader').delay(350).fadeOut('slow');
+            $('body').delay(350).css({ 'overflow': 'visible' });
+        })
+        //]]>
+    </script>
 </body>
 
 </html>

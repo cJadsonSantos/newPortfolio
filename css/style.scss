@@ -1,8 +1,7 @@
 * {
-    margin    : 0;
-    padding   : 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 
 // Ao usar @import automaticamente tudo em sua respectiva classe, é exportado para o style.css
@@ -10,14 +9,49 @@
 @import 'sass/typography';
 
 body {
-    background-color: $lilas;
+    background: $lilas;
+    background-size: 300%;
+    animation: colors 15s ease-in-out infinite;
 
+    @keyframes colors {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    body {
+        background: $lilas-mobile;
+        background-size: 300%;
+        animation: colors 15s ease-in-out infinite;
+
+        @keyframes colors {
+            0% {
+                background-position: 0% 50%
+            }
+    
+            50% {
+                background-position: 100% 50%
+            }
+    
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    }
 }
 
 
-.border {
-    border: 1px solid royalblue;
-}
 
-@import 'sass/spacing';
+
+
 @import 'sass/layout';

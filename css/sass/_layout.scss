@@ -1,266 +1,228 @@
 // MENU
 
 .menu {
-    width: 100%;
-    // Faz um elemento ficar ao lado do outro (sobre, skills, tecnologias, contato)
-    display: flex;
-    // Assume distanciamento equidistantes de um elemento a outro 
-    justify-content: space-between;
-    padding: 24px 16px;
+  width: 100%;
+  // Faz um elemento ficar ao lado do outro (sobre, skills, tecnologias, contato)
+  display: flex;
+  // Assume distanciamento equidistantes de um elemento a outro
+  justify-content: space-between;
+  padding: 24px 16px;
 }
 
-
 .container {
-    max-width: 1080px; //1220px
-    margin: 0 auto;
-    padding: 24px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+  max-width: 1220px; //1220px
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .hero {
-    height: 40vh; //40vh
+  height: auto; //40vh
 }
 
 @media screen and (max-width: 860px) {
-    .hero {
-        height: auto;
-    }
+  .hero {
+    height: auto;
+  }
 
-    .container {
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+  }
 }
 
-
 .container-item:nth-child(1) {
-    flex-grow: 2;
-
+  flex-grow: 2;
 }
 
 // Isso não seria possivel com css, englobar uma tag dentro de outra
 .container-item:nth-child(2) {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  img {
+    max-width: 290px;
+    margin-top: 100px;
+  }
+
+  @media screen and (max-width: 860px) {
     img {
-        max-width: 290px;
-        margin-top: 100px;
+      max-width: 200px;
     }
+  }
 
-    .foto-perfil {
-        img {
-            align-items: center;
-            max-width: 200px;
-            background-color: transparent;
-            border-radius: 100%;
-            object-fit: cover;
-            border: 2px solid #47A09E;
-        }
+  .foto-perfil {
+    img {
+      align-items: center;
+      max-width: 200px;
+      background-color: transparent;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 2px solid #47a09e;
     }
+  }
 
-    .social-media {
-        color: $verde;
-        align-items: center;
-        padding: 24px 8px;
-        font-size: 20px;
-    }
+  .social-media {
+    color: $verde;
+    align-items: center;
+    padding: 24px 8px;
+    font-size: 20px;
+  }
 }
 
+.icon-1 {
+  margin-bottom: 10%;
+}
 
 @media screen and (max-width: 860px) {
-    .icon-1 {
-        font-size: 12px;
-    }
-
+  .icon-1 {
+    font-size: 12px;
+  }
 }
 
 .container-skills:nth-child(1) {
-    flex-grow: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #48A2A0;
-    font-size: 72px;
-    flex-direction: column;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #48a2a0;
+  font-size: 72px;
+  flex-direction: column;
 }
 
+.skills-nome {
+  color: $cinza-escuro;
+  margin-bottom: 5%;
+}
 
 .skills {
-    color: $branco;
-}
-
-
-@media screen and (max-width: 860px) {
-
-    .container-skills:nth-child(1) {
-        font-size: 54px;
-    }
-
-    .skills {
-        font-size: 54px;
-    }
+  color: $verde;
 }
 
 @media screen and (max-width: 860px) {
+  .container-skills:nth-child(1) {
+    font-size: 54px;
+  }
 
-    .coffee {
-        font-size: 75px;
-    }
+  .skills {
+    font-size: 54px;
+  }
+}
 
-    i {
-        font-size: 40px;
-        max-height: 10%;
-    }
+@media screen and (max-width: 860px) {
+  .coffee {
+    font-size: 75px;
+  }
+
+  i {
+    font-size: 40px;
+    max-height: 10%;
+  }
 }
 
 // PROJETOS
 .bb-gray {
-    width: 100%;
-    border-bottom: 1px solid $verde;
+  width: 100%;
+  border-bottom: 1px solid $verde;
 }
-
-
 
 .list-item {
-    max-width: 1080px; //1220px
+  max-width: 1220px; //1220px
+  position: relative;
+  margin: 0 auto;
+  padding: 16px 24px;
 
-    position: relative;
+  //display        : flex;
+  justify-content: flex-start;
+  align-items: center;
 
-    margin: 0 auto;
-    padding: 16px 24px;
-
-    //display        : flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    a {
-        &:hover {
-            &+.img-project {
-                transform: translate(-50%, -50%) translate3d(0, 0, 0);
-            }
-        }
+  a {
+    &:hover {
+      & + .img-project {
+        transform: translate(-50%, -50%) translate3d(0, 0, 0);
+      }
     }
+  }
 }
-
-
 
 .img-project {
-    margin-top: 200px;
-    max-width: 720px;
-    border-radius: 4px;
-    position: absolute;
+  margin-top: 200px;
+  max-width: 720px;
+  border-radius: 4px;
+  position: absolute;
 
-    //Comentar caso não fique atrativo
-    top: 50%;
-    left: 50%;
-    transition: 1s ease;
-    z-index: -1;
-    opacity: 1;
-    transform: translate(-50%, -50%) translate3d(-2000px, 0, 0) skewX(50deg);
+  //Comentar caso não fique atrativo
+  top: 50%;
+  left: 50%;
+  transition: 1s ease;
+  z-index: -1;
+  opacity: 1;
+  transform: translate(-100%, -50%) translate3d(-2000px, 0, 0) skewX(50deg);
 }
 
-
 @media screen and (max-width: 860px) {
+  h3 {
+    font-size: 18px;
+  }
 
-    h3 {
-        font-size: 18px;
-    }
-
-    .img-project {
-        margin-top: 100px;
-        max-width: 420px;
-        margin-left: 20px;
-
-    }
+  .img-project {
+    margin-top: 100px;
+    max-width: 420px;
+    margin-left: 20px;
+  }
 }
 
 body {
-    //overflow: hidden;
-    overflow: auto;
+  //overflow: hidden;
+  overflow: auto;
 }
 
 footer {
-    position: fixed absolute;
-    bottom: 0px;
-    color: #FFF;
-    width: 100%;
-    margin-top: 200px;
-    height: 100px;
-    text-align: center;
+  position: static;
+  bottom: 0px;
+  color: #fff;
+  width: 100%;
+  margin-top: 300px;
+  height: 100px;
+  text-align: center;
 }
 
 /* ini: Preloader */
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #14151F;
-    /* cor do background que vai ocupar o body */
-    z-index: 999;
-    /* z-index para jogar para frente e sobrepor tudo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $gradiente;
+  /* cor do background que vai ocupar o body */
+  z-index: 2;
+  /* z-index para jogar para frente e sobrepor tudo */
 }
 
 #preloader .inner {
-    position: absolute;
-    top: 50%;
-    /* centralizar a parte interna do preload (onde fica a animação)*/
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  /* centralizar a parte interna do preload (onde fica a animação)*/
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.bolas>div {
-    display: inline-block;
-    background-color: #fff;
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    margin: 3px;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    animation-name: animarBola;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-
+.bem-vindo {
+  margin-top: 100px;
+  text-align: center;
 }
 
-.bolas>div:nth-child(1) {
-    animation-duration: 0.75s;
-    animation-delay: 0;
-}
-
-.bolas>div:nth-child(2) {
-    animation-duration: 0.75s;
-    animation-delay: 0.12s;
-}
-
-.bolas>div:nth-child(3) {
-    animation-duration: 0.75s;
-    animation-delay: 0.24s;
-}
-
-@keyframes animarBola {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    16% {
-        -webkit-transform: scale(0.1);
-        transform: scale(0.1);
-        opacity: 0.7;
-    }
-
-    33% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-    }
+#nome {
+  border: none;
+  padding: 15px;
+  margin-top: 100px;
+  height: 30px;
+  border-radius: 50px;
+  outline: none;
+  width: 300px;
 }
